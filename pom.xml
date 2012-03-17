@@ -17,12 +17,8 @@
     <distributionManagement>
         <repository>
             <id>release-repository</id>
-            <url>http://marugoshi.github.com/java-util/maven2/release</url>
+            <url>http://marugoshi.github.com/java-util/maven2</url>
         </repository>
-        <snapshotRepository>
-            <id>snapshot-repository</id>
-            <url>http://marugoshi.github.com/java-util/maven2/snapshots</url>
-        </snapshotRepository>
     </distributionManagement>
 
     <modules>
