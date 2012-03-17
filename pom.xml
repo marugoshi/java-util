@@ -14,6 +14,17 @@
         <developerConnection>scm:git:git@github.com:marugoshi/java-util.git</developerConnection>
     </scm>
 
+    <distributionManagement>
+        <repository>
+            <id>release-repository</id>
+            <url>http://marugoshi.github.com/java-util/maven2/release</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshot-repository</id>
+            <url>http://marugoshi.github.com/java-util/maven2/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <modules>
         <module>util-ssh</module>
     </modules>
