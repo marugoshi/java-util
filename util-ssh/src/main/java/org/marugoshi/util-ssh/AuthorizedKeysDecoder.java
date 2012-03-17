@@ -1,4 +1,4 @@
-package main.java.org.marugoshi.util-ssh;
+package org.marugoshi.util-ssh;
 
 import java.math.BigInteger;
 import java.security.KeyFactory;
