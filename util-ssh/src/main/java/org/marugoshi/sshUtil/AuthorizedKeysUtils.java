@@ -1,4 +1,4 @@
-package org.marugoshi.javaUtil.utilSsh;
+package org.marugoshi.sshUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -14,10 +14,22 @@ import java.security.spec.RSAPublicKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
 
+/**
+ * Utils for encode and decode PublicKey java objects to Linux
+ * authorized_keys file format entries.
+ */
 public class AuthorizedKeysUtils {
     private byte[] bytes;
     private int pos;
 
+    /**
+     * Encode PublicKey (DSA or RSA encoded) to authorized_keys like string
+     *
+     * @param publicKey DSA or RSA encoded
+     * @param user username for output authorized_keys like string
+     * @return authorized_keys like string
+     * @throws IOException
+     */
     public static String encodePublicKey(PublicKey publicKey, String user)
             throws IOException {
         String publicKeyEncoded;
@@ -61,6 +73,13 @@ public class AuthorizedKeysUtils {
         }
     }
 
+    /**
+     *
+     *
+     * @param keyLine String as authorized_keys like format
+     * @return PublicKey object with RSA or DSA key encoded.
+     * @throws Exception
+     */
     public PublicKey decodePublicKey(String keyLine) throws Exception {
         bytes = null;
         pos = 0;
